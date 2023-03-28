@@ -1,0 +1,97 @@
+body{
+  background-color: black;
+}
+
+.yellow{
+  background-color: yellow;
+  overflow: hidden;
+  position:absolute;
+  height: 1000px;
+  width: 600px;
+  rotate: -15deg;
+  right: 0px;
+  left: 70%;
+  bottom: -5%;
+}
+
+span{
+  width: 60%;
+  font-size: 1cm;
+  position: absolute;
+  right: auto;
+  left: 5%;
+  top: auto;
+  bottom: 13%;
+  font-family: "retro-land-mayhem";
+  color: yellow;
+  will-change: contents;
+  animation-name: wiggleMove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+span.copy{
+  font-size: 1cm;
+  position: absolute;
+  right: auto;
+  left: 5%;
+  top: auto;
+  bottom: 13%;
+  font-family: "retro-land-mayhem";
+  color: yellow;
+  will-change: contents;
+  animation-name: wiggleMove;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  opacity: 0.5;
+  animation-delay: 0.3s;
+}
+
+.room{
+  position: absolute;
+  right: 40%;
+  left: auto;
+  top: 20%;
+  bottom: auto;
+}
+
+.rooster{
+  position: absolute;
+  right: 2%;
+  left: auto;
+  top: 20%;
+  bottom: auto;
+  will-change: contents;
+  animation-name: wiggleRotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wiggleRotate{
+  0%{
+    transform: rotate(-3deg);
+  }
+  100%{
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes wiggleMove{
+  0%{
+    transform:translate(-0.2cm, -0.2cm);
+  }
+  100%{
+    transform:translate(0.2cm, 0.2cm);
+  }
+}
+
+@font-face {
+  font-family: "retro-land-mayhem";
+  src: url('retro-land-mayhem.ttf') format("truetype");
+}
